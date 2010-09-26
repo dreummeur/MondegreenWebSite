@@ -1,0 +1,151 @@
+
+.round {
+    -moz-border-radius:    15px;
+    -webkit-border-radius: 15px;
+    border-radius:         15px;
+}
+
+.shadow {
+    -moz-box-shadow: 1px 1px 12px #757464;
+    -webkit-box-shadow: 1px 1px 12px #757464; 
+    box-shadow: 1px 1px 12px #757464;
+}
+
+.with_border {
+    border: 2px solid #acaa96;
+}
+
+/* Links */
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #cccccc;
+}
+
+
+/* Navigation */
+
+.navigation li {
+    display: inline-block;
+    font-size: 180%;
+}
+
+ul {
+    margin:0;
+}
+
+#news_li a {
+    color: #757464;
+}
+
+#media_li a {
+    color: #b9b6a2;
+}
+
+#about_li a {
+    color: #b9b6a2;
+}
+
+#contact_li a {
+    color: #f2eed4;
+}
+
+#header .navigation {
+    background: url(../images/banner_header.jpg) no-repeat;
+    padding: 11em 0 0.5em 0;
+}
+
+#header .navigation li {
+    padding: 0 3.75em 0 3.75em;
+}
+
+#header .navigation li a {
+    font-size:120%;
+}
+
+#footer .navigation li {
+    padding: 0 5.7em 0 5.7em;
+}
+
+/* Text */
+
+.text-wrapper {
+    padding:1.5em;
+    background: #f7f7e2;  
+}
+
+#text_bethere {
+    text-align:justify;
+    margin-right:320px;
+}
+
+#text_welcome {
+    text-align:justify;
+    margin-right:240px;
+}
+
+.main_title {
+    font-size:3em;
+    text-align:center;
+    margin:0em;
+}
+
+.post_header {
+    font-size:2em;
+}
+
+.post_text {
+    font-size:1.2em;
+}
+
+.emphase {
+    font-weight:bolder;
+}
+
+/* Images */
+
+.img_container {
+    float:right;
+}
+
+#home_img_container {
+    width: 218px;
+    height: 360px;
+    background: url(../images/quai_mondegreen.jpg) no-repeat;
+}
+
+#bethere_img_container {
+    width:300px;
+    height:400px;    
+    background: url(../images/flyer_be_there.jpg) no-repeat;
+}
+
+.about_img {
+    width: 680px;
+    height: 220px;
+    margin: 0 auto 1em;
+}
+
+#about_mg {
+    background: url(../images/quai_dos.jpg) no-repeat;
+}
+
+#about_pb {
+    background: url(../images/about_patrice.jpg) no-repeat;
+}
+
+#about_fd {
+    background: url(../images/about_francois.jpg) no-repeat;
+}
+
+#about_bb {
+    background: url(../images/about_benjamin.jpg) no-repeat;
+}
+
+#about_jbv {
+    background: url(../images/about_jeanbaptiste.jpg) no-repeat;
+}

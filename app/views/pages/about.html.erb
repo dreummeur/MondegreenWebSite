@@ -1,0 +1,36 @@
+<body>
+<%= javascript_include_tag :defaults %>
+<div id="inner_content">
+  <p>
+    <%=
+        link_to_function("Mondegreen") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_mg"}
+        end
+    %>
+    <br/>
+    <%= link_to_function("Patrice") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_pb"}
+        end
+    %>
+    <br/>
+    <%= link_to_function("François") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_fd"}
+        end
+    %>
+    <br/>
+    <%= link_to_function("Benjamin") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_bb"}
+        end
+    %>
+    <br/>
+    <%= link_to_function("Jean-Baptiste") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_jbv"}
+        end
+    %>
+    <br/>
+  </p>
+  <div id="dynamic_img">
+    <div id="about_mg" class="round with_border about_img"></div>
+  </div>
+</div>
+</body>
