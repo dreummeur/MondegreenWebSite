@@ -32,8 +32,8 @@ a:hover {
 .navigation li {
     display: inline-block;
     font-size: 180%;
-    /*zoom: 1;*/
-    /**display: inline;*/
+    zoom: 1;
+    *display: inline;
 }
 
 ul {
