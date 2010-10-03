@@ -1,36 +1,102 @@
 <body>
 <%= javascript_include_tag :defaults %>
 <div id="inner_content">
-  <p>
-    <%=
-        link_to_function("Mondegreen") do |page|
-            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_mg"}
-        end
-    %>
-    <br/>
-    <%= link_to_function("Patrice") do |page|
-            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_pb"}
-        end
-    %>
-    <br/>
-    <%= link_to_function("François") do |page|
-            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_fd"}
-        end
-    %>
-    <br/>
-    <%= link_to_function("Benjamin") do |page|
-            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_bb"}
-        end
-    %>
-    <br/>
-    <%= link_to_function("Jean-Baptiste") do |page|
-            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_jbv"}
-        end
-    %>
-    <br/>
-  </p>
+
   <div id="dynamic_img">
     <div id="about_mg" class="round with_border about_img"></div>
+  </div>
+  <div id="bio_short" class="prepend-top text-wrapper round with_border post_text">
+        Avant d’être un groupe,
+        <%= link_to_function("Mondegreen") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_mg"}
+            end
+        %>
+        est un répertoire, un assemblage de mots et de notes construit avec patience et
+        minutie dans un recoin d’appartement ou élaboré pendant les temps morts des répétitions d’un autre groupe. Devenant
+        de plus en plus nombreuses, ces chansons commencent à s’animer d’une vie propre et à chercher une voie vers
+        l’extérieur.<br/>
+        Leurs premières victimes sont leurs auteurs,
+        <%= link_to_function("Patrice") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_pb"}
+        end
+        %> et
+        <%= link_to_function("François") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_fd"}
+        end
+        %>, qui n’ont d’autre choix que de les jouer en
+        public, armés de deux guitares et d’un xylophone.
+        <%= link_to_function("Benjamin") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_bb"}
+        end
+        %>, innocent spectateur, est happé : le voilà bassiste.
+        Avides de rythme, elles jettent leur dévolu sur
+        <%= link_to_function("Jean-Baptiste") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_jbv"}
+        end
+        %> : la boucle est bouclée, les chansons sont rassasiées.<br/>
+        Parallèlement, le répertoire du groupe poursuit sa croissance, leurs arrangements se peaufinent, leurs sons se
+        diversifient. D’électricité nerveuse en acoustique inquiète, d’harmonies radieuses en dissonances fugaces, de
+        pulsations régulières en rythmes saccadés, les quatre musiciens étendent leur champ d’action, sans perdre de vue
+        l’objectif principal : faire vivre ces chansons.
+  </div>
+  <div id="bio_long" class="prepend-top text-wrapper round with_border post_text">
+        <%=
+            link_to_function("Mondegreen") do |page|
+                page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_mg"}
+            end
+        %>, comment ça commence ?
+        D’un côté, nous avons
+        <%= link_to_function("François") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_fd"}
+        end
+        %>, amateur de Beatles, John Cale, Pink Floyd et de métal (beaucoup de métal). Il joue
+        de la guitare, de la batterie, du xylophone, un peu tout ce qui lui tombe sous la main en fait et a déjà l’expérience
+        de l’écriture et de la scène avec plusieurs groupes. De l’autre, nous avons
+        <%= link_to_function("Patrice") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_pb"}
+        end
+        %>, qui apprend vaguement à jouer de
+        la guitare depuis quelques années, qui commence encore plus vaguement à écrire des morceaux voire aller jusqu’à les
+        chanter. Il a eu (comme tout le monde ?) sa phase rock progressif étant ado, il en a gardé des traces qui
+        s’appellent Radiohead, Mercury Rev ou les Flaming Lips. Il vénère Neil Young et voue une passion déraisonnable pour Gérard
+        Manset. Ils se rencontrent sur les bancs de la fac en 2002. La collaboration naît de manière plutôt évidente, de la
+        complémentarité entre 2 styles, 2 voix. Ils écrivent des morceaux à un rythme soutenu, accumulent les idées, les
+        ébauches de chansons, affinent les arrangements, retravaillent sans cesse leurs textes… ils cherchent et, souvent,
+        trouvent. Ils finissent par faire leurs débuts sur scène en mode 2 guitares/2 voix. C’est au cours d’un de leurs concerts
+        qu’ils se trouveront un bassiste parmi les spectateurs :
+        <%= link_to_function("Benjamin") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_bb"}
+        end
+        %>, enthousiaste et avide d’apprendre, toujours partant pour
+        découvrir de nouveaux horizons musicaux… c’est peu dire qu’ils s’en donnent à cœur joie pour lui faire partager
+        leurs influences (qu’il assimile tellement bien qu’il finit par être encore plus incollable qu’eux sur Peter Gabriel,
+        Sufjan Stevens ou les Jayhawks).
+        Le line-up évolue un peu au fil des années et voit passer dans les rangs de la formation différents batteurs ainsi
+        qu’une violoncelliste. Les concerts se succèdent. En plus de leurs morceaux à eux, ils se font plaisir à reprendre
+        Arcade Fire, REM ou dEUS. C’est en décembre 2009 qu’ils finiront par dégotter par petite annonce
+        <%= link_to_function("Jean-Baptiste") do |page|
+            page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_jbv"}
+        end
+        %> qui n’aura besoin que d’une seule petite répétition pour faire admettre l’évidence : le nouveau batteur, ça sera lui !
+        Il recadre un peu tout ça, apporte un regard neuf sur des morceaux déjà anciens et trouve sans peine son chemin à
+        travers les nouveaux. D’ailleurs ces morceaux, ça ressemble à quoi ?
+        S’ils aiment des artistes comme Ween ou My Morning Jacket, ce n’est pas pour rien : pourquoi s’enfermer dans un
+        style précis et bien délimité, alors qu’on peut varier les plaisirs, passer du folk dépouillé enrichi aux harmonies
+        vocales aux morceaux rock pêchus qui se terminent en chaos bruitiste. Ils ont beau adorer les refrains simples et directs de
+        Big Star, il prennent un malin plaisir à rajouter des mesures impaires et des accords suspendus aux noms
+        improbables. S’ils chantent en anglais, ce n’est pas par choix délibéré mais juste parce que ça s’imposait naturellement, c’est
+        tout. En studio, ils piochent dans leur répertoire pour enregistrer d’abord en 2006 un EP auto-produit de 6
+        titres, « Sandcastles », mélange déjà représentatif de l’éclectisme du groupe, qui sera suivi en 2009 par un premier
+        album « Latecomers » où ils enfoncent le clou de leur schizophrénie musicale, des torsades électriques de No Changes
+        à la sérénité folk d'Under The Trees, du groove presque soul de la chanson titre aux choeurs triomphants de It Serves
+        You Right, en profitant de cette occasion pour enrichir leur son par le biais d'instruments inhabituels comme la
+        viole de gambe, le charango ou la mandoline.
+        A part ça ?
+        Ce sont des gens de bon goût : ils adorent les chats, les Monty Pythons et Stanley Kubrick, sont capables de réciter
+        par cœur les dialogues de « La Classe Américaine » ou les spectacles d’Eddie Izzard et ne rateraient pour rien au
+        monde un film de Bollywood avec Shah Rukh Khan (même si on cherche encore l’influence sur leur style…). Ils ont chez
+        eux un nombre peu raisonnable de cd et vous les croiserez sans doute dans la fosse au prochain concert de Stars ou
+        de Shearwater.
   </div>
 </div>
 </body>
