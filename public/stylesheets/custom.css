@@ -73,6 +73,10 @@ ul {
     padding: 0 5.7em 0 5.7em;
 }
 
+#bio_version .navigation li {
+    padding: 0 5.8em 0 5.8em;
+}
+
 /* Text */
 
 .text-wrapper {
@@ -106,6 +110,10 @@ ul {
 
 .emphase {
     font-weight:bolder;
+}
+
+.internal_link {
+    text-decoration:underline;
 }
 
 /* Images */

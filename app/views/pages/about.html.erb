@@ -1,13 +1,34 @@
 <body>
 <%= javascript_include_tag :defaults %>
-<div id="inner_content">
 
-  <div id="dynamic_img">
+  <div id="inner_content">
+    
+    <div id="bio_version" class="prepend-top append-bottom span-24 last">
+      <ul class="navigation">
+        <li>
+          <%= link_to_function("Version courte") do |page|
+            page.show 'bio_short'
+            page.hide 'bio_long'
+            end
+          %>
+        </li>
+        <li>
+          <%= link_to_function("Version longue") do |page|
+            page.show 'bio_long'
+            page.hide 'bio_short'
+            end
+          %>
+        </li>
+      </ul>
+    </div>
+
+  <div id="dynamic_img" class="span-22 append-2 last">
     <div id="about_mg" class="round with_border about_img"></div>
   </div>
-  <div id="bio_short" class="prepend-top text-wrapper round with_border post_text">
+  <div class="span-22 append-2 last">
+  <div id="bio_short" style="display:none;" class="prepend-top text-wrapper round with_border post_text">
         Avant d’être un groupe,
-        <%= link_to_function("Mondegreen") do |page|
+        <%= link_to_function("Mondegreen", :class => "internal_link") do |page|
             page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_mg"}
             end
         %>
@@ -16,21 +37,21 @@
         de plus en plus nombreuses, ces chansons commencent à s’animer d’une vie propre et à chercher une voie vers
         l’extérieur.<br/>
         Leurs premières victimes sont leurs auteurs,
-        <%= link_to_function("Patrice") do |page|
+        <%= link_to_function("Patrice", :class => "internal_link") do |page|
             page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_pb"}
         end
         %> et
-        <%= link_to_function("François") do |page|
+        <%= link_to_function("François", :class => "internal_link") do |page|
             page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_fd"}
         end
         %>, qui n’ont d’autre choix que de les jouer en
         public, armés de deux guitares et d’un xylophone.
-        <%= link_to_function("Benjamin") do |page|
+        <%= link_to_function("Benjamin", :class => "internal_link") do |page|
             page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_bb"}
         end
         %>, innocent spectateur, est happé : le voilà bassiste.
         Avides de rythme, elles jettent leur dévolu sur
-        <%= link_to_function("Jean-Baptiste") do |page|
+        <%= link_to_function("Jean-Baptiste", :class => "internal_link") do |page|
             page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_jbv"}
         end
         %> : la boucle est bouclée, les chansons sont rassasiées.<br/>
@@ -39,20 +60,20 @@
         pulsations régulières en rythmes saccadés, les quatre musiciens étendent leur champ d’action, sans perdre de vue
         l’objectif principal : faire vivre ces chansons.
   </div>
-  <div id="bio_long" class="prepend-top text-wrapper round with_border post_text">
+  <div id="bio_long" style="display:none;" class="prepend-top text-wrapper round with_border post_text">
         <%=
-            link_to_function("Mondegreen") do |page|
+            link_to_function("Mondegreen", :class => "internal_link") do |page|
                 page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_mg"}
             end
         %>, comment ça commence ?
         D’un côté, nous avons
-        <%= link_to_function("François") do |page|
+        <%= link_to_function("François", :class => "internal_link") do |page|
             page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_fd"}
         end
         %>, amateur de Beatles, John Cale, Pink Floyd et de métal (beaucoup de métal). Il joue
         de la guitare, de la batterie, du xylophone, un peu tout ce qui lui tombe sous la main en fait et a déjà l’expérience
         de l’écriture et de la scène avec plusieurs groupes. De l’autre, nous avons
-        <%= link_to_function("Patrice") do |page|
+        <%= link_to_function("Patrice", :class => "internal_link") do |page|
             page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_pb"}
         end
         %>, qui apprend vaguement à jouer de
@@ -64,7 +85,7 @@
         ébauches de chansons, affinent les arrangements, retravaillent sans cesse leurs textes… ils cherchent et, souvent,
         trouvent. Ils finissent par faire leurs débuts sur scène en mode 2 guitares/2 voix. C’est au cours d’un de leurs concerts
         qu’ils se trouveront un bassiste parmi les spectateurs :
-        <%= link_to_function("Benjamin") do |page|
+        <%= link_to_function("Benjamin", :class => "internal_link") do |page|
             page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_bb"}
         end
         %>, enthousiaste et avide d’apprendre, toujours partant pour
@@ -74,7 +95,7 @@
         Le line-up évolue un peu au fil des années et voit passer dans les rangs de la formation différents batteurs ainsi
         qu’une violoncelliste. Les concerts se succèdent. En plus de leurs morceaux à eux, ils se font plaisir à reprendre
         Arcade Fire, REM ou dEUS. C’est en décembre 2009 qu’ils finiront par dégotter par petite annonce
-        <%= link_to_function("Jean-Baptiste") do |page|
+        <%= link_to_function("Jean-Baptiste", :class => "internal_link") do |page|
             page[:dynamic_img].replace_html :partial => 'focus', :locals => {:member => "about_jbv"}
         end
         %> qui n’aura besoin que d’une seule petite répétition pour faire admettre l’évidence : le nouveau batteur, ça sera lui !
@@ -99,4 +120,5 @@
         de Shearwater.
   </div>
 </div>
+      </div>
 </body>
