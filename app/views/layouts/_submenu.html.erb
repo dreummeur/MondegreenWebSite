@@ -1,0 +1,13 @@
+<div class="prepend-1 span-22">
+  <ul class="navigation">
+      <% @submenus.each do |submenu| %>
+          <li class="<%= submenu.padding %>">
+            <%= link_to_function(submenu.name) do |page|
+                    page.show submenu.sectiontoshow
+                    page.hide submenu.concurrentmenus(@submenus)
+                end
+            %>
+          </li>
+      <% end %>
+  </ul>
+</div>
