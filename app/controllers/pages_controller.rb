@@ -20,9 +20,9 @@ class PagesController < ApplicationController
 
   def media
     @title = "Media"
-    @submenus = [Submenu.new("Photos", "", "prepend-3"),
-                 Submenu.new("Videos", "", "prepend-4"),
-                 Submenu.new("Audio", "", "prepend-4")]
+    @submenus = [Submenu.new("Photos", "section_photos", "prepend-3"),
+                 Submenu.new("Videos", "section_videos", "prepend-4"),
+                 Submenu.new("Audio", "section_audio", "prepend-4")]
   end
 
 end

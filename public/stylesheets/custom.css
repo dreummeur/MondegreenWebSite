@@ -75,6 +75,11 @@ ul {
 
 /* Text */
 
+.scrollable {
+    height:480px;
+    overflow:scroll;
+}
+
 .text-wrapper {
     padding:1.5em;
     background: #f7f7e2;  
