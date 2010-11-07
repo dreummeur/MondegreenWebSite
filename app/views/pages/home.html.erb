@@ -1,76 +1,116 @@
 <div class="span-22 last">
-  <div id="news_section" class="prepend-top append-bottom text-wrapper round with-border">
-    <p>
-      <span class="post_header emphase">Photos en ligne</span><br/>
-      <span class="small quiet">Le 01/11/2010</span>
-    </p>
-    <br/>
-
-    <div id="concert_img_container" class="img_container round shadow append-bottom"></div>
-    <div id="text_concert">
-      <p class="post_text">
-        Le section <%= link_to 'Media', :controller => 'pages', :action => 'media' %>
-        a été mise à jour avec les photos du concert du 17 Octobre au BeThere.<br/>
-        <br/>
-        Et comme on est super proches de notre public (celles et ceux qui étaient là le savent, la moitié du groupe
-        jouait
-        dans la fosse), on en profite pour vous remercier d'être venu(e)s, en espérant que vous avez apprécié le concert
-        tout autant que nous.<br/>
-        <br/>
-        Merci donc, et à très bientôt !
+  <div id="news_section">
+    <div class="prepend-top text-wrapper round with-border">
+      <p>
+        <span class="post_header emphase">Photos en ligne</span><br/>
+        <span class="small quiet">Le 01/11/2010</span>
       </p>
+      <br/>
+
+      <div id="concert_img_container" class="img_container round shadow append-bottom"></div>
+      <div id="text_concert">
+        <p class="post_text">
+          Les photos du concert du 17/10 au Be There sont disponibles dans la section
+          <b><%= link_to 'Media', :controller => 'pages', :action => 'media' %></b>.<br/>
+          On en profite pour vous remercier d'avoir été de la partie avec nous, en espérant que vous aurez
+          apprécié cette soirée tout autant que nous.<br/>
+          Ah, et la prochaine fois, promis, on essaiera de caser tout le groupe sur scène.<br/>
+          <br/>
+          A très bientôt !
+        </p>
+      </div>
+    </div>
+    <div class="span-3 last">
+      <div class="navigation_news with_border round">
+        &nbsp;&nbsp;&nbsp;
+        <%= link_to_function("<", :class => "navigation_button") do |page|
+            page.show 'news_bethere'
+            page.hide 'news_section'
+        end
+        %>
+        <span class="navigation_disabled prepend-1">&gt;</span>
+      </div>
     </div>
   </div>
-  <hr/>
-  <div id="news_bethere" class="prepend-top append-bottom text-wrapper round with_border">
-    <p>
-      <span class="post_header emphase">Mondegreen en concert !</span><br/>
-      <span class="small quiet">Le 22/09/2010</span>
-    </p>
-    <br/>
+  <div id="news_bethere" style="display:none;">
+    <div class="prepend-top text-wrapper round with_border">
+      <p>
+        <span class="post_header emphase">Mondegreen en concert !</span><br/>
+        <span class="small quiet">Le 22/09/2010</span>
+      </p>
+      <br/>
 
-    <div id="bethere_img_container" class="img_container round shadow append-bottom"></div>
-    <div id="text_bethere">
-      <p class="post_text">
-        Après presque un an d'absence dans les salles de concert parisiennes, Mondegreen fait son retour sur scène le
+      <div id="bethere_img_container" class="img_container round shadow append-bottom"></div>
+      <div id="text_bethere">
+        <p class="post_text">
+          Après presque un an d'absence dans les salles de concert parisiennes, Mondegreen fait son retour sur scène le
           <span class="emphase">Dimanche 17 Octobre à 20h au
             <%= link_to 'Be There, 19 Rue des Deux Ponts dans le 4ème arrondissement à Paris.', 'http://maps.google.fr/maps?f=q&source=s_q&hl=fr&geocode=&q=19+Rue+des+Deux+Ponts+75004+paris&sll=48.854046,2.34434&sspn=0.083357,0.222988&ie=UTF8&hq=&hnear=19+Rue+des+Deux+Ponts,+75004+Paris,+Ile-de-France&ll=48.851854,2.356761&spn=0.00521,0.013937&z=17', :target => '_blank', :class => 'internal_link' %>
           </span>
-        <br/>
-        <br/>
-        Le bar se trouve sur l'île Saint-Louis, à proximité des stations de métro Pont Marie (ligne 7), Saint-Paul
-        (ligne 1) et Cardinal Lemoine (ligne 10).
-        <br/>
-        <br/>
-        Nous espérons vous voir à cette occasion...<br/>
-        <br/>
-        Be There or be square !
-      </p>
+          <br/>
+          <br/>
+          Le bar se trouve sur l'île Saint-Louis, à proximité des stations de métro Pont Marie (ligne 7), Saint-Paul
+          (ligne 1) et Cardinal Lemoine (ligne 10).
+          <br/>
+          <br/>
+          Nous espérons vous voir à cette occasion...<br/>
+          <br/>
+          Be There or be square !
+        </p>
+      </div>
+    </div>
+    <div class="span-3 last">
+      <div class="navigation_news with_border round">
+        &nbsp;&nbsp;&nbsp;
+        <%= link_to_function("<", :class => "navigation_button") do |page|
+              page.show 'news_welcome'
+              page.hide 'news_bethere'
+            end
+        %>
+        <%= link_to_function(">", :class => "navigation_button prepend-1") do |page|
+              page.show 'news_section'
+              page.hide 'news_bethere'
+            end
+        %>
+      </div>
     </div>
   </div>
-  <hr/>
-  <div id="news_welcome" class="prepend-top append-bottom text-wrapper round with_border">
-    <p>
-      <span class="post_header emphase">Bienvenue</span><br/>
-      <span class="small quiet">Le 17/09/2010</span>
-    </p>
-    <br/>
-
-    <div id="home_img_container" class="img_container round shadow append-bottom"></div>
-    <div id="text_welcome">
-      <p class="post_text">
-        La première version du site de Mondegreen est en ligne (et en même temps, vous avez déjà du avoir l'info puisque
-        vous êtes dessus).
-        Le contenu du site sera amené à s'enrichir régulièrement, c'est pourquoi nous vous invitons à revenir faire un
-        tour de temps en temps
-        pour jeter un oeil ou une oreille à ce que nous aurons à vous proposer.<br/>
-        <br/>
-        Pour celles et ceux qui ne nous connaissent pas, Mondegreen est une formation de quatre musiciens
-        dont le registre est principalement le rock indie.
-        Le groupe est basé à Paris et a plusieurs E.P. et un album à son actif.<br/>
-        <br/>
-        Nous vous souhaitons une agréable visite !
+  <div id="news_welcome" style="display:none;">
+    <div class="prepend-top text-wrapper round with_border">
+      <p>
+        <span class="post_header emphase">Bienvenue</span><br/>
+        <span class="small quiet">Le 17/09/2010</span>
       </p>
+      <br/>
+
+      <div id="home_img_container" class="img_container round shadow append-bottom"></div>
+      <div id="text_welcome">
+        <p class="post_text">
+          La première version du site de Mondegreen est en ligne (et en même temps, vous avez déjà du avoir l'info
+          puisque
+          vous êtes dessus).
+          Le contenu du site sera amené à s'enrichir régulièrement, c'est pourquoi nous vous invitons à revenir faire un
+          tour de temps en temps
+          pour jeter un oeil ou une oreille à ce que nous aurons à vous proposer.<br/>
+          <br/>
+          Pour celles et ceux qui ne nous connaissent pas, Mondegreen est une formation de quatre musiciens
+          dont le registre est principalement le rock indie.
+          Le groupe est basé à Paris et a plusieurs E.P. et un album à son actif.<br/>
+          <br/>
+          Nous vous souhaitons une agréable visite !
+        </p>
+      </div>
+    </div>
+    <div class="span-3 last">
+      <div class="navigation_news with_border round">
+        &nbsp;&nbsp;&nbsp;
+        <span class="navigation_disabled">&lt;</span>
+        <%= link_to_function(">", :class => "navigation_button prepend-1") do |page|
+            page.show 'news_bethere'
+            page.hide 'news_welcome'
+        end
+        %>
+      </div>
     </div>
   </div>
 </div>
