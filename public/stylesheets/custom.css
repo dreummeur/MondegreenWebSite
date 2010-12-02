@@ -155,6 +155,12 @@ ul {
     background: url(../images/concert.jpg) no-repeat;
 }
 
+#espaceb_img_container {
+    width:300px;
+    height:425px;
+    background:url(../images/concert_espaceb.jpg) no-repeat;
+}
+
 .about_img {
     width: 680px;
     height: 220px;

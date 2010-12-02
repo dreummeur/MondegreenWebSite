@@ -1,5 +1,46 @@
 <div class="span-22 last">
-  <div id="news_section">
+  <div id="news_concert_espaceb">
+    <div class="prepend-top text-wrapper round with-border">
+      <p>
+        <span class="post_header emphase">Mondegreen en concert le 10 Décembre</span><br/>
+        <span class="small quiet">Le 01/12/2010</span>
+      </p>
+      <br/>
+      <div id="espaceb_img_container" class="img_container round shadow append-bottom"></div>
+      <div class="text_bethere">
+        <p class="post_text">
+          Mondegreen se produira sur scène <span class="emphase">le 10 décembre à 20h à l'Espace B</span>,
+          dans le 19ème arrondissement à Paris.<br/>
+          Nous partagerons l'affiche avec les groupes
+          <%= link_to 'Alice the goon', 'http://www.myspace.com/goon_show', :target => '_blank', :class => 'internal_link' %>
+          et <%= link_to 'The JFKs', 'http://www.myspace.com/jfk95', :target => '_blank', :class => 'internal_link' %>,
+          avec pour but commun de vibrer avec vous tout au long de cette belle soirée de musique live.<br/>
+          <br/>
+          La salle se trouve
+          <%= link_to 'ici, non pas là, juste à côté. Par ici, vous y êtes presque, un peu plus loin... Voilàààà juste là',
+                      'http://maps.google.fr/maps?f=q&source=s_q&gl=fr&g=16+Rue+Barban%C3%A8gre,+75019+Paris&q=Espace+B+++16+Rue+Barban%C3%A8gre,+75019+Paris&ie=UTF8&hq=Espace+B&hnear=16+Rue+Barban%C3%A8gre,+75019+Paris,+Ile-de-France&z=16', :target => '_blank', :class => 'internal_link' %>,
+          proche du métro Corentin Cariou sur la ligne 7.<br/>
+          L'entrée est à 5 euros, il y a également un bar et un restaurant sur place, pour celles et ceux que la musique rebute
+          mais qui ne sont pas contre se coller quelque chose sous la cravate.<br/>
+          <br/>
+          En plus, dehors il fera sûrement froid. Et nuit. Honnêtement, vous serez aussi bien avec nous au chaud à l'intérieur.
+          On essaiera de ne pas faire trop de bruit si vous voulez.
+        </p>
+      </div>
+    </div>
+    <div class="span-3 last">
+      <div class="navigation_news with_border round">
+        &nbsp;&nbsp;&nbsp;
+        <%= link_to_function("<", :class => "navigation_button") do |page|
+            page.show 'news_section'
+            page.hide 'news_concert_espaceb'
+        end
+        %>
+        <span class="navigation_disabled prepend-1">&gt;</span>
+      </div>
+    </div>
+  </div>
+  <div id="news_section" style="display:none;">
     <div class="prepend-top text-wrapper round with-border">
       <p>
         <span class="post_header emphase">Photos en ligne</span><br/>
@@ -28,7 +69,11 @@
             page.hide 'news_section'
         end
         %>
-        <span class="navigation_disabled prepend-1">&gt;</span>
+        <%= link_to_function(">", :class => "navigation_button prepend-1") do |page|
+              page.show 'news_concert_espaceb'
+              page.hide 'news_section'
+            end
+        %>
       </div>
     </div>
   </div>
@@ -41,7 +86,7 @@
       <br/>
 
       <div id="bethere_img_container" class="img_container round shadow append-bottom"></div>
-      <div id="text_bethere">
+      <div class="text_bethere">
         <p class="post_text">
           Après presque un an d'absence dans les salles de concert parisiennes, Mondegreen fait son retour sur scène le
           <span class="emphase">Dimanche 17 Octobre à 20h au
