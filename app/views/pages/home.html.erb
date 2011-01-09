@@ -1,5 +1,36 @@
 <div class="span-22 last">
-  <div id="news_concert_espaceb">
+  <div id="news_new_year">
+    <div class="prepend-top text-wrapper round with-border">
+      <p>
+        <span class="post_header emphase">Bonne année 2011</span><br/>
+        <span class="small quiet">Le 01/01/2011</span>
+      </p>
+      <br/>
+      <div id="new_year_img_container" class="img_container round shadow append-bottom"></div>
+      <div class="text_margin_420">
+        <p class="post_text">
+          Nous vous souhaitons à toutes et à tous une belle et heureuse année 2011, pleine de rebondissements et de flocons d'avoine !<br/>
+          Et là où d'autres se seraient limités à ces voeux somme toute classiques, nous allons jusqu'à vous souhaiter des trucs absolument
+          énormes et révolutionnaires : un voyage sur la Lune, la traversée de l'Atlantique à la nage ou encore un concert de Mondegreen.<br/>
+          <br/>
+          Et si vous sentez que vous aurez du mal à faire les 2 premiers trucs, pas de panique, on fera en sorte de venir
+          jouer pas trop loin de chez vous.
+        </p>
+      </div>
+    </div>
+    <div class="span-3 last">
+      <div class="navigation_news with_border round">
+        &nbsp;&nbsp;&nbsp;
+        <%= link_to_function("<", :class => "navigation_button") do |page|
+            page.show 'news_concert_espaceb'
+            page.hide 'news_new_year'
+        end
+        %>
+        <span class="navigation_disabled prepend-1">&gt;</span>
+      </div>
+    </div>
+  </div>
+  <div id="news_concert_espaceb" style="display:none;">
     <div class="prepend-top text-wrapper round with-border">
       <p>
         <span class="post_header emphase">Mondegreen en concert le 10 Décembre</span><br/>
@@ -7,7 +38,7 @@
       </p>
       <br/>
       <div id="espaceb_img_container" class="img_container round shadow append-bottom"></div>
-      <div class="text_bethere">
+      <div class="text_margin_320">
         <p class="post_text">
           Mondegreen se produira sur scène <span class="emphase">le 10 décembre à 20h à l'Espace B</span>,
           dans le 19ème arrondissement à Paris.<br/>
@@ -36,7 +67,11 @@
             page.hide 'news_concert_espaceb'
         end
         %>
-        <span class="navigation_disabled prepend-1">&gt;</span>
+        <%= link_to_function(">", :class => "navigation_button prepend-1") do |page|
+              page.show 'news_new_year'
+              page.hide 'news_concert_espaceb'
+            end
+        %>
       </div>
     </div>
   </div>
@@ -49,7 +84,7 @@
       <br/>
 
       <div id="concert_img_container" class="img_container round shadow append-bottom"></div>
-      <div id="text_concert">
+      <div class="text_margin_420">
         <p class="post_text">
           Les photos du concert du 17/10 au Be There sont disponibles dans la section
           <b><%= link_to 'Media', :controller => 'pages', :action => 'media' %></b>.<br/>
@@ -86,7 +121,7 @@
       <br/>
 
       <div id="bethere_img_container" class="img_container round shadow append-bottom"></div>
-      <div class="text_bethere">
+      <div class="text_margin_320">
         <p class="post_text">
           Après presque un an d'absence dans les salles de concert parisiennes, Mondegreen fait son retour sur scène le
           <span class="emphase">Dimanche 17 Octobre à 20h au
@@ -129,7 +164,7 @@
       <br/>
 
       <div id="home_img_container" class="img_container round shadow append-bottom"></div>
-      <div id="text_welcome">
+      <div class="text_margin_240">
         <p class="post_text">
           La première version du site de Mondegreen est en ligne (et en même temps, vous avez déjà du avoir l'info
           puisque
